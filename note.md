@@ -29,3 +29,10 @@ Features:
     Google Map Integration (for location)
 
     SEO Optimization (for better search ranking)
+
+
+    Established in 1994, the Travancore Club in Thiruvalla is a premier socio-recreational hub that brings together individuals from diverse walks of life. Founded by a visionary group of pioneers, the club was built on values of cultural unity, sportsmanship, and social engagement.
+
+What began as a gathering of like-minded individuals has evolved into a vibrant institution with over 1,000 members and affiliations with 72+ reputed clubs across India. Nestled on a scenic 6.5-acre campus, the Travancore Club offers state-of-the-art facilities—from sports and wellness to cultural and social spaces—all designed to enhance community living.
+
+More than just a club, Travancore is a place where friendships are formed, events are celebrated, and every member feels at home. Whether you're here to unwind, connect, or contribute, the Travancore Club welcomes you to be part of its growing legacy.
