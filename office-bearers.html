@@ -62,6 +62,7 @@
                             <li><a href="membership.html">Membership</a></li>
                             <li><a href="affiliated-clubs.html">Affiliated Clubs</a></li>
                             <li><a href="office-bearers.html">Office Bearers</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
                             <li><a href="contact.html">Contact Us</a></li>
                         </ul>
                     </div>
@@ -200,89 +201,14 @@
 
     <!-- gallery section  -->
     <section class="mt-5 mb-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-5">
-                    <div class="title-area text-center"><span class="sub-title2 style2">Gallery</span>
-                        <h2 class="sec-title ">Moments That Matter, <span> Memories That Last</span></h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="project-block_one col-lg-6">
-                    <div class="project-block_one-inner wow fadeInRight" data-wow-delay="300ms"
-                        data-wow-duration="1500ms">
-                        <a href="assets/images/index/slider/slider1.png"
-                            title="Travancore club Thiruvalla Gallery Images" class="popup-link">
-                            <div class="gallery-card">
-                                <img class="img-fluid mx-auto d-block gallery-img"
-                                    src="assets/images/index/slider/slider1.png"
-                                    alt="Travancore club Thiruvalla Gallery Images">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-block_one col-lg-6">
-                    <div class="project-block_one-inner wow fadeInRight" data-wow-delay="300ms"
-                        data-wow-duration="1500ms">
-                        <a href="assets/images/index/slider/slider2.PNG"
-                            title="Travancore club Thiruvalla Gallery Images" class="popup-link">
-                            <div class="gallery-card">
-                                <img class="img-fluid mx-auto d-block gallery-img"
-                                    src="assets/images/index/slider/slider2.PNG"
-                                    alt="Travancore club Thiruvalla Gallery Images">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-block_one col-lg-4">
-                    <div class="project-block_one-inner wow fadeInRight" data-wow-delay="300ms"
-                        data-wow-duration="1500ms">
-                        <a href="assets/images/facilities/shuttel-cort.png"
-                            title="Travancore club Thiruvalla Gallery Images" class="popup-link">
-                            <div class="gallery-card">
-                                <img class="img-fluid mx-auto d-block gallery-img"
-                                    src="assets/images/facilities/shuttel-cort.png"
-                                    alt="Travancore club Thiruvalla Gallery Images">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-block_one col-lg-4">
-                    <div class="project-block_one-inner wow fadeInRight" data-wow-delay="300ms"
-                        data-wow-duration="1500ms">
-                        <a href="assets/images/facilities/guest-house.png"
-                            title="Travancore club Thiruvalla Gallery Images" class="popup-link">
-                            <div class="gallery-card">
-                                <img class="img-fluid mx-auto d-block gallery-img"
-                                    src="assets/images/facilities/guest-house.png"
-                                    alt="Travancore club Thiruvalla Gallery Images">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-block_one col-lg-4">
-                    <div class="project-block_one-inner wow fadeInRight" data-wow-delay="300ms"
-                        data-wow-duration="1500ms">
-                        <a href="assets/images/facilities/music-hall.png"
-                            title="Travancore club Thiruvalla Gallery Images" class="popup-link">
-                            <div class="gallery-card">
-                                <img class="img-fluid mx-auto d-block gallery-img"
-                                    src="assets/images/facilities/music-hall.png"
-                                    alt="Travancore club Thiruvalla Gallery Images">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
+        <div class="container mt-5 mb-5">
+            <h1 class="mt-5 mb-5 text-center">This Page Will Updated Soon</h1>
         </div>
     </section>
 
 
     <footer class="footer-wrapper footer-layout1 footer-layout2 footer-layout2-1 bg-fixed"
         data-bg-src="assets/images/bg/1.jpg" data-overlay="black3" data-opacity="8">
-        <!-- <img src="assets/images/bg/1.jpg" alt=""> -->
         <div class="footer-wrap2-1 ">
             <div class="container">
                 <div class="footer-logo">
@@ -291,11 +217,10 @@
                 </div>
                 <ul class="footer-menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="service.html">OUR SERVICES</a></li>
-                    <li><a href="contact.html">OFFER & EVENTS</a></li>
-                    <li><a href="gallery.html">GALLERY</a></li>
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="office-bearers.html">Office Bearers</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
@@ -314,6 +239,23 @@
     <script src="assets/js/app.min.js"></script>
     <script src="assets/js/main.js"></script>
     <!-- gallery script  -->
+    <script>
+        $(document).ready(function () {
+            $('.popup-link').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true
+                },
+                // Navigation options
+                navigation: {
+                    enabled: true,
+                    // Customize arrow markup
+                    prevArrow: '<button class="mfp-arrow mfp-arrow-left"></button>',
+                    nextArrow: '<button class="mfp-arrow mfp-arrow-right"></button>'
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
