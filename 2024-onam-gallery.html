@@ -209,73 +209,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="project-block_one col-lg-6">
-                    <div class="project-block_one-inner wow fadeInRight" data-wow-delay="300ms"
-                        data-wow-duration="1500ms">
-                        <a href="assets/images/index/slider/slider1.png"
-                            title="Travancore club Thiruvalla Gallery Images" class="popup-link">
-                            <div class="gallery-card">
-                                <img class="img-fluid mx-auto d-block gallery-img"
-                                    src="assets/images/index/slider/slider1.png"
-                                    alt="Travancore club Thiruvalla Gallery Images">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-block_one col-lg-6">
-                    <div class="project-block_one-inner wow fadeInRight" data-wow-delay="300ms"
-                        data-wow-duration="1500ms">
-                        <a href="assets/images/index/slider/slider2.PNG"
-                            title="Travancore club Thiruvalla Gallery Images" class="popup-link">
-                            <div class="gallery-card">
-                                <img class="img-fluid mx-auto d-block gallery-img"
-                                    src="assets/images/index/slider/slider2.PNG"
-                                    alt="Travancore club Thiruvalla Gallery Images">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-block_one col-lg-4">
-                    <div class="project-block_one-inner wow fadeInRight" data-wow-delay="300ms"
-                        data-wow-duration="1500ms">
-                        <a href="assets/images/facilities/shuttel-cort.png"
-                            title="Travancore club Thiruvalla Gallery Images" class="popup-link">
-                            <div class="gallery-card">
-                                <img class="img-fluid mx-auto d-block gallery-img"
-                                    src="assets/images/facilities/shuttel-cort.png"
-                                    alt="Travancore club Thiruvalla Gallery Images">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-block_one col-lg-4">
-                    <div class="project-block_one-inner wow fadeInRight" data-wow-delay="300ms"
-                        data-wow-duration="1500ms">
-                        <a href="assets/images/facilities/guest-house.png"
-                            title="Travancore club Thiruvalla Gallery Images" class="popup-link">
-                            <div class="gallery-card">
-                                <img class="img-fluid mx-auto d-block gallery-img"
-                                    src="assets/images/facilities/guest-house.png"
-                                    alt="Travancore club Thiruvalla Gallery Images">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-block_one col-lg-4">
-                    <div class="project-block_one-inner wow fadeInRight" data-wow-delay="300ms"
-                        data-wow-duration="1500ms">
-                        <a href="assets/images/facilities/music-hall.png"
-                            title="Travancore club Thiruvalla Gallery Images" class="popup-link">
-                            <div class="gallery-card">
-                                <img class="img-fluid mx-auto d-block gallery-img"
-                                    src="assets/images/facilities/music-hall.png"
-                                    alt="Travancore club Thiruvalla Gallery Images">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            
+            <div class="row" id="dynamic-image-container"></div>
 
         </div>
     </section>
@@ -315,21 +250,25 @@
     <!-- gallery script  -->
     <script>
         $(document).ready(function () {
-            fetch('/json/images.json')
+            fetch('assets/json/Travancore-Club-Onam-2024.json')
                 .then(response => response.json())
                 .then(images => {
                     const container = document.getElementById('dynamic-image-container');
                     images.forEach((image, index) => {
                         const block = document.createElement('div');
-                        block.className = 'project-block_one col-lg-4 col-md-6 col-sm-12';
+                        block.className = 'project-block_one col-lg-4';
                         block.innerHTML = `
-              <div class="project-block_one-inner wow fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
-                <a href="${image}" title="JM Architects & Builder Kottarakkara, Kerala Gallery Images ${index}" class="popup-link">
-                  <div class="gallery-card">
-                    <img class="img-fluid mx-auto d-block gallery-img" src="${image}" alt="JM Architects & Builder Kottarakkara, Kerala Gallery Images ${index}" loading="lazy">
-                  </div>
-                </a>
-              </div>
+                    <div class="project-block_one-inner wow fadeInRight" data-wow-delay="300ms"
+                        data-wow-duration="1500ms">
+                        <a href="${image}"
+                            title="Travancore club Thiruvalla Gallery Images" class="popup-link">
+                            <div class="gallery-card">
+                                <img class="img-fluid mx-auto d-block gallery-img"
+                                    src="${image}"
+                                    alt="Travancore club Thiruvalla Gallery Images">
+                            </div>
+                        </a>
+                    </div>
             `;
                         container.appendChild(block);
                     });
