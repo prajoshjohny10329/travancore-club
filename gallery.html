@@ -204,78 +204,13 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-5">
-                    <div class="title-area text-center"><span class="sub-title2 style2">Gallery</span>
-                        <h2 class="sec-title ">Moments That Matter, <span> Memories That Last</span></h2>
+                    <div class="title-area text-center"><span class="sub-title2 style2">16/08/2024</span>
+                        <h2 class="sec-title ">Our 2024 Onam Function</span></h2>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="project-block_one col-lg-6">
-                    <div class="project-block_one-inner wow fadeInRight" data-wow-delay="300ms"
-                        data-wow-duration="1500ms">
-                        <a href="assets/images/index/slider/slider1.png"
-                            title="Travancore club Thiruvalla Gallery Images" class="popup-link">
-                            <div class="gallery-card">
-                                <img class="img-fluid mx-auto d-block gallery-img"
-                                    src="assets/images/index/slider/slider1.png"
-                                    alt="Travancore club Thiruvalla Gallery Images">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-block_one col-lg-6">
-                    <div class="project-block_one-inner wow fadeInRight" data-wow-delay="300ms"
-                        data-wow-duration="1500ms">
-                        <a href="assets/images/index/slider/slider2.PNG"
-                            title="Travancore club Thiruvalla Gallery Images" class="popup-link">
-                            <div class="gallery-card">
-                                <img class="img-fluid mx-auto d-block gallery-img"
-                                    src="assets/images/index/slider/slider2.PNG"
-                                    alt="Travancore club Thiruvalla Gallery Images">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-block_one col-lg-4">
-                    <div class="project-block_one-inner wow fadeInRight" data-wow-delay="300ms"
-                        data-wow-duration="1500ms">
-                        <a href="assets/images/facilities/shuttel-cort.png"
-                            title="Travancore club Thiruvalla Gallery Images" class="popup-link">
-                            <div class="gallery-card">
-                                <img class="img-fluid mx-auto d-block gallery-img"
-                                    src="assets/images/facilities/shuttel-cort.png"
-                                    alt="Travancore club Thiruvalla Gallery Images">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-block_one col-lg-4">
-                    <div class="project-block_one-inner wow fadeInRight" data-wow-delay="300ms"
-                        data-wow-duration="1500ms">
-                        <a href="assets/images/facilities/guest-house.png"
-                            title="Travancore club Thiruvalla Gallery Images" class="popup-link">
-                            <div class="gallery-card">
-                                <img class="img-fluid mx-auto d-block gallery-img"
-                                    src="assets/images/facilities/guest-house.png"
-                                    alt="Travancore club Thiruvalla Gallery Images">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="project-block_one col-lg-4">
-                    <div class="project-block_one-inner wow fadeInRight" data-wow-delay="300ms"
-                        data-wow-duration="1500ms">
-                        <a href="assets/images/facilities/music-hall.png"
-                            title="Travancore club Thiruvalla Gallery Images" class="popup-link">
-                            <div class="gallery-card">
-                                <img class="img-fluid mx-auto d-block gallery-img"
-                                    src="assets/images/facilities/music-hall.png"
-                                    alt="Travancore club Thiruvalla Gallery Images">
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            
+            <div class="row" id="dynamic-image-container"></div>
 
         </div>
     </section>
@@ -315,19 +250,50 @@
     <!-- gallery script  -->
     <script>
         $(document).ready(function () {
-            $('.popup-link').magnificPopup({
-                type: 'image',
-                gallery: {
-                    enabled: true
-                },
-                // Navigation options
-                navigation: {
-                    enabled: true,
-                    // Customize arrow markup
-                    prevArrow: '<button class="mfp-arrow mfp-arrow-left"></button>',
-                    nextArrow: '<button class="mfp-arrow mfp-arrow-right"></button>'
-                }
-            });
+            fetch('assets/json/Travancore-Club-Onam-2024.json')
+                .then(response => response.json())
+                .then(images => {
+                    const container = document.getElementById('dynamic-image-container');
+                    images.forEach((image, index) => {
+                        const block = document.createElement('div');
+                        block.className = 'project-block_one col-lg-4';
+                        block.innerHTML = `
+                    <div class="project-block_one-inner wow fadeInRight" data-wow-delay="300ms"
+                        data-wow-duration="1500ms">
+                        <a href="${image}"
+                            title="Travancore club Thiruvalla Onam 2024 Images" class="popup-link">
+                            <div class="gallery-card">
+                                <img class="img-fluid mx-auto d-block gallery-img"
+                                    src="${image}"
+                                    alt="Travancore club Thiruvalla Onam 2024 Images">
+                            </div>
+                        </a>
+                    </div>
+            `;
+                        container.appendChild(block);
+                    });
+
+                    // Initialize Magnific Popup after all images are added
+                    $('.popup-link').magnificPopup({
+                        type: 'image',
+                        mainClass: 'mfp-fade',
+                        removalDelay: 300,
+                        gallery: {
+                            enabled: true,
+                            navigateByImgClick: true,
+                            preload: [0, 1] // Preloads the previous and next images
+                        },
+                        callbacks: {
+                            open: function () {
+                                console.log('Popup is opened');
+                            },
+                            close: function () {
+                                console.log('Popup is closed');
+                            }
+                        }
+                    });
+                })
+                .catch(error => console.error('Error fetching images:', error));
         });
     </script>
 </body>
