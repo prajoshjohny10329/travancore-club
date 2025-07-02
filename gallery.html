@@ -56,12 +56,16 @@
                                     <li><a href="facilities.html">Card Room</a></li>
                                     <li><a href="facilities.html">Gymnasium</a></li>
                                     <li><a href="facilities.html">Music Hall</a></li>
-                                    <li><a href="facilities.html">Pond</a></li>
+                                    <li><a href="facilities.html">Walkway & Pond</a></li>
+                                                <li><a href="facilities.html">Ambulance service</a></li>
+                                                <li><a href="facilities.html">Home Care</a></li>
+                                                <li><a href="facilities.html">Kids Park</a></li>
                                 </ul>
                             </li>
                             <li><a href="membership.html">Membership</a></li>
                             <li><a href="affiliated-clubs.html">Affiliated Clubs</a></li>
                             <li><a href="office-bearers.html">Office Bearers</a></li>
+                            <li><a href="ladies-forum.html">Ladies Forum</a></li>
                             <li><a href="gallery.html">Gallery</a></li>
                             <li><a href="contact.html">Contact Us</a></li>
                         </ul>
@@ -163,6 +167,7 @@
                                         <li class="menu-item-has-children"><a href="about-us.html">About Us</a>
                                             <ul class="sub-menu">
                                                 <li><a href="about-us.html">About Us</a></li>
+                                                <li><a href="ladies-forum.html">Ladies Forum</a></li>
                                                 <li><a href="gallery.html">Events Gallery</a></li>
                                             </ul>
                                         </li>
@@ -172,11 +177,12 @@
                                                 <li><a href="facilities.html">Guest House</a></li>
                                                 <li><a href="facilities.html">Tennis Court</a></li>
                                                 <li><a href="facilities.html">Shuttle Court</a></li>
-                                                <li><a href="facilities.html">Restaurant</a></li>
-                                                <li><a href="facilities.html">Card Room</a></li>
-                                                <li><a href="facilities.html">Gymnasium</a></li>
+                                                
                                                 <li><a href="facilities.html">Music Hall</a></li>
-                                                <li><a href="facilities.html">Pond</a></li>
+                                                <li><a href="facilities.html">Walkway & Pond</a></li>
+                                                <li><a href="facilities.html">Ambulance service</a></li>
+                                                <li><a href="facilities.html">Home Care</a></li>
+                                                <li><a href="facilities.html">Kids Park</a></li>
 
                                             </ul>
                                         </li>
@@ -209,8 +215,8 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-5">
-                    <div class="title-area text-center"><span class="sub-title2 style2">16/08/2024</span>
-                        <h2 class="sec-title ">Our 2024 Onam Function</span></h2>
+                    <div class="title-area text-center"><span class="sub-title2 style2">Our Gallery</span>
+                        <h2 class="sec-title ">Moments That Matter, Memories That Last</span></h2>
                     </div>
                 </div>
             </div>
@@ -255,7 +261,7 @@
     <!-- gallery script  -->
     <script>
         $(document).ready(function () {
-            fetch('assets/json/Travancore-Club-Onam-2024.json')
+            fetch('assets/json/gallery.json')
                 .then(response => response.json())
                 .then(images => {
                     const container = document.getElementById('dynamic-image-container');
@@ -266,11 +272,11 @@
                     <div class="project-block_one-inner wow fadeInRight" data-wow-delay="300ms"
                         data-wow-duration="1500ms">
                         <a href="${image}"
-                            title="Travancore club Thiruvalla Onam 2024 Images" class="popup-link">
+                            title="Travancore Club Thiruvalla Gallery" class="popup-link">
                             <div class="gallery-card">
                                 <img class="img-fluid mx-auto d-block gallery-img"
                                     src="${image}"
-                                    alt="Travancore club Thiruvalla Onam 2024 Images">
+                                    alt="Travancore Club Thiruvalla Gallery">
                             </div>
                         </a>
                     </div>

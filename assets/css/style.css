@@ -14,7 +14,7 @@
     /* --theme-color: #BF930F;
     --title-color: #fff; */
     --bg-theme-color: #fff;
-    --theme-color: #b51e00;
+    --theme-color: #000fb5;
     --title-color: #000000;
     --text-new-color: #000;
     --body-color: #000;
@@ -3400,7 +3400,7 @@ input[type=time]::-webkit-calendar-picker-indicator {
     font-size: 18px;
     letter-spacing: 0.2em;
     text-transform: capitalize;
-    color: var(--theme-color);
+    color: #e7a818;
     display: block;
     margin-bottom: 15px
 }
@@ -3459,7 +3459,7 @@ input[type=time]::-webkit-calendar-picker-indicator {
 }
 
 .sub-title2::before {
-    background-color: var(--theme-color);
+    background-color: #e7a818;
     margin-left: -4rem
 }
 
@@ -4218,7 +4218,7 @@ hr.title-line {
 }
 
 .text-theme {
-    color: var(--theme-color) !important
+    color: #e7a818 !important
 }
 
 .text-title {
@@ -12582,7 +12582,7 @@ ul.comment-list:has(>.th-comment-item ~ .th-comment-item):first-child>.th-post-c
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(11, 11, 12, 0.6);
+    background: rgba(11, 11, 12, 0.16);
     z-index: -1
 }
 
@@ -12847,7 +12847,7 @@ ul.comment-list:has(>.th-comment-item ~ .th-comment-item):first-child>.th-post-c
 }
 
 .hero-style5 .hero-star-rating {
-    color: var(--theme-color);
+    color: #c98711;
     margin-bottom: 45px;
     margin-top: -0.2em
 }
