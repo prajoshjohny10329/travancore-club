@@ -29577,7 +29577,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 }
 .bg-image-btn {
-  background-image: url('../images/bg/1.jpg'); /* Replace with your image URL */
+  background-image: url('../images/bg/bg-theme.webp'); /* Replace with your image URL */
   background-size: cover;
   background-position: center;
   color: white;
