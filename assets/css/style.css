@@ -20528,7 +20528,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .team-contact .box-text a:hover {
-    color: var(--theme-color)
+    color: #efc226;
 }
 
 .team-contact .box-title {
